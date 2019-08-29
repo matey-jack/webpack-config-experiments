@@ -6,7 +6,7 @@ import {createSelector} from "reselect";
 import {State as IRouteState} from "router5";
 import {stylesheet} from "typestyle";
 import {config as appConfig} from "../../../config";
-import {salesFunnelUrl} from "../../config.json";
+import {salesFunnelUrl} from "../../FridayConfig";
 import {setupCss} from "../helpers/setupCss";
 import {Translator} from "../models/Translator";
 import {ITranslator} from "../models/TranslatorInterfaces";

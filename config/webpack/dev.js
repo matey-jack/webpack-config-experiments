@@ -78,7 +78,7 @@ const config = {
         NODE_ENV: JSON.stringify('development')
       }
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
   ],
 
   optimization: {
@@ -89,7 +89,9 @@ const config = {
 utils.copySyncIfDoesntExist('./config/main.js', './config/main.local.js');
 utils.createIfDoesntExist('./build');
 utils.createIfDoesntExist('./build/public');
+utils.createIfDoesntExist('./build/config');
 utils.copySync('./src/favicon.ico', './build/public/favicon.ico', true);
 utils.copySync('./src/index.html', './build/index.html');
+utils.copySync('./src/config.json', './build/config/config.json');
 
 module.exports = config;

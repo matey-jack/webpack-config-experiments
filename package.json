@@ -5,6 +5,7 @@
   "config": {
     "validate-commit-msg": {
       "types": [
+        "wip",
         "build",
         "chore",
         "ci",
