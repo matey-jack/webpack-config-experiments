@@ -6,6 +6,7 @@ import {createSelector} from "reselect";
 import {State as IRouteState} from "router5";
 import {stylesheet} from "typestyle";
 import {config as appConfig} from "../../../config";
+import {salesFunnelUrl} from "../../config.json";
 import {setupCss} from "../helpers/setupCss";
 import {Translator} from "../models/Translator";
 import {ITranslator} from "../models/TranslatorInterfaces";
@@ -50,6 +51,8 @@ class App extends React.Component<IStateToProps> {
         <Helmet {...appConfig.app.head}/>
         <Header/>
         {segment && this.components[segment] ? React.createElement(this.components[segment]) : <div>{notFound}</div>}
+        <br/>
+        Hey, <a href={salesFunnelUrl}>click here to get your car insured</a>.
       </section>
     );
   }

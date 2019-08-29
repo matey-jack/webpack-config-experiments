@@ -1,5 +1,5 @@
 {
-  "name": "ts-react-boilerplate",
+  "name": "webpack-config-experiments",
   "description": "A universal boilerplate for building web applications w/ TypeScript, React, Redux and more.",
   "main": "build/server.js",
   "config": {
