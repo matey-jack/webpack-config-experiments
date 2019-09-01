@@ -89,9 +89,12 @@ const config = {
 utils.copySyncIfDoesntExist('./config/main.js', './config/main.local.js');
 utils.createIfDoesntExist('./build');
 utils.createIfDoesntExist('./build/public');
-utils.createIfDoesntExist('./build/config');
 utils.copySync('./src/favicon.ico', './build/public/favicon.ico', true);
 utils.copySync('./src/index.html', './build/index.html');
-utils.copySync('./src/config.json', './build/config/config.json');
+
+// this is only for local development. on a server, config.js will be delivered
+// separately from the project files.
+utils.createIfDoesntExist('./build/config');
+utils.copySync('./src/config.js', './build/config/config.js');
 
 module.exports = config;

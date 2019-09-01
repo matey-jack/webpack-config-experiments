@@ -4,16 +4,7 @@
 <head>
 </head>
 <body>
-  <script type="text/javascript">
-    "use strict";
-    var fridayConfig;
-    (async () => {
-      const configResponse = await window.fetch('config/config.json');
-      // use good old 'var' because this has to be global
-      fridayConfig = await configResponse.json();
-      // window.fridayConfig = fridayConfig;
-    })();
-  </script>
+  <script src="config/config.js"></script>
   <div id="app"></div>
   <script src="/public/js/app.js"></script>
 </body>
