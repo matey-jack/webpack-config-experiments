@@ -3,6 +3,7 @@
 const config = {
   // This part goes to React-Helmet for Head of our HTML
   app: {
+    findme: "very unique string 654987",
     head: {
       link: [
         {

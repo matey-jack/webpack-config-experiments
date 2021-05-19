@@ -1,10 +1,11 @@
 {
-  "name": "ts-react-boilerplate",
+  "name": "webpack-config-experiments",
   "description": "A universal boilerplate for building web applications w/ TypeScript, React, Redux and more.",
   "main": "build/server.js",
   "config": {
     "validate-commit-msg": {
       "types": [
+        "wip",
         "build",
         "chore",
         "ci",
@@ -88,7 +89,6 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "file-loader": "^4.0.0",
-    "husky": "^3.0.0",
     "jest": "^24.8.0",
     "jest-enzyme": "^7.0.2",
     "mini-html-webpack-plugin": "^2.0.0",

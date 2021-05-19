@@ -78,7 +78,7 @@ const config = {
         NODE_ENV: JSON.stringify('development')
       }
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
   ],
 
   optimization: {
@@ -91,5 +91,10 @@ utils.createIfDoesntExist('./build');
 utils.createIfDoesntExist('./build/public');
 utils.copySync('./src/favicon.ico', './build/public/favicon.ico', true);
 utils.copySync('./src/index.html', './build/index.html');
+
+// this is only for local development. on a server, config.js will be delivered
+// separately from the project files.
+utils.createIfDoesntExist('./build/config');
+utils.copySync('./src/config.js', './build/config/config.js');
 
 module.exports = config;
